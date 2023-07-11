@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "displayName": "Audit Blob Public Access for Storage Accounts",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "By default, new Storage Accounts allow anonymous public access to Blob storage, if the containers are created with such option as well. This policy disallows the anonymous access on a storage account level, even if the containers would still allow it.",
+    "metadata": {
+      "category": "Storage",
+      "createdBy": "9ab3706e-c787-441f-b14f-60ad6430387e",
+      "createdOn": "2023-07-11T13:28:22.8323215Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "not": {
+              "field": "Microsoft.Storage/storageAccounts/allowBlobPublicAccess",
+              "equals": "false"
+            }
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  },
+  "id": "/subscriptions/26655ce5-1c32-4693-a6bd-505410055faa/providers/Microsoft.Authorization/policyDefinitions/47a41581-4479-4052-92ce-bbb3fc0145c7",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "47a41581-4479-4052-92ce-bbb3fc0145c7",
+  "systemData": {
+    "createdBy": "haiko@cloud.hertes.net",
+    "createdByType": "User",
+    "createdAt": "2023-07-11T13:28:22.8204504Z",
+    "lastModifiedBy": "haiko@cloud.hertes.net",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2023-07-11T13:28:22.8204504Z"
+  }
+}
