@@ -32,14 +32,14 @@
       }
     }
   },
-  "id": "/subscriptions/26655ce5-1c32-4693-a6bd-505410055faa/providers/Microsoft.Authorization/policyDefinitions/47a41581-4479-4052-92ce-bbb3fc0145c7",
+  "id": "/subscriptions/SUB_ID/providers/Microsoft.Authorization/policyDefinitions/47a41581-4479-4052-92ce-bbb3fc0145c7",
   "type": "Microsoft.Authorization/policyDefinitions",
   "name": "47a41581-4479-4052-92ce-bbb3fc0145c7",
   "systemData": {
-    "createdBy": "haiko@cloud.hertes.net",
+    "createdBy": "EMAIL",
     "createdByType": "User",
     "createdAt": "2023-07-11T13:28:22.8204504Z",
-    "lastModifiedBy": "haiko@cloud.hertes.net",
+    "lastModifiedBy": "EMAIL",
     "lastModifiedByType": "User",
     "lastModifiedAt": "2023-07-11T13:28:22.8204504Z"
   }
